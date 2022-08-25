@@ -2,6 +2,7 @@ FROM alpine:latest
 
 RUN apk --update add nginx
 
+# Put the app both in root dir and /2048 to validate the traffic routing via AWS ALB
 COPY 2048 /usr/share/nginx/html/2048
 COPY 2048 /usr/share/nginx/html/
 
